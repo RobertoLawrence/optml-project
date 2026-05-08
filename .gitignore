@@ -1,2 +1,6 @@
 venv/
 autoresearch/
+.jupyter_ystore.db
+.jupyter/
+.ipynb_checkpoints/
+__pycache__/
