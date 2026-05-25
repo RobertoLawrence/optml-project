@@ -3,7 +3,7 @@
 # PyTorch: adjust the --extra-index-url to match your server's CUDA version.
 # Check with: nvidia-smi  →  look at "CUDA Version" in the top-right corner.
 # Common values: cu124 (12.4), cu121 (12.1), cu118 (11.8)
---extra-index-url https://download.pytorch.org/whl/cu124
+#--extra-index-url https://download.pytorch.org/whl/cu130
 torch
 
 # Data / tokenization (versions pinned from notebook cell 3)
