@@ -1,0 +1,21 @@
+# Install with: uv pip install -r requirements.txt
+#
+# PyTorch: adjust the --extra-index-url to match your server's CUDA version.
+# Check with: nvidia-smi  →  look at "CUDA Version" in the top-right corner.
+# Common values: cu124 (12.4), cu121 (12.1), cu118 (11.8)
+--extra-index-url https://download.pytorch.org/whl/cu124
+torch
+
+# Data / tokenization (versions pinned from notebook cell 3)
+datasets==4.0.0
+huggingface_hub==1.7.1
+tokenizers
+fsspec==2023.10.0
+
+# Experiment tracking
+wandb
+
+# Numerics / plotting
+numpy
+matplotlib
+tqdm

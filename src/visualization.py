@@ -272,7 +272,6 @@ def _plot_learning_curves(rows: List[Dict], figs_dir: str):
 
 def _plot_heatmap(rows: List[Dict], figs_dir: str):
     """Heatmap: mean final val loss, axes = aggregator × optimizer."""
-    import pandas as pd
     from collections import defaultdict
 
     data = defaultdict(lambda: defaultdict(list))
