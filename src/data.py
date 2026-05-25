@@ -135,12 +135,12 @@ class DataManager:
         return True
 
     def _download_and_tokenize(self) -> None:
-        from huggingface_hub import login
         from datasets import load_dataset
 
-        if self.hf_token:
-            login(token=self.hf_token, add_to_git_credential=False)
-            print("[data] Logged in to HuggingFace Hub.")
+        # Pass the token directly to load_dataset instead of calling login(),
+        # which tries to write a token cache file and may hit permission errors
+        # on shared cluster filesystems.
+        hf_token = self.hf_token or None
 
         lang_train_texts: Dict[str, List[str]] = {}
         lang_val_texts:   Dict[str, List[str]] = {}
@@ -152,6 +152,7 @@ class DataManager:
                 name=lc,
                 split="train",
                 streaming=True,
+                token=hf_token,
             )
             texts: List[str] = []
             for ex in tqdm(ds, total=num_train + num_val, desc=f"  {lc}"):
