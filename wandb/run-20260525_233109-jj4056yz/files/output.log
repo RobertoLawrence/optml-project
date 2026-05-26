@@ -1,0 +1,12 @@
+
+======================================================================
+  Experiment: c4_dirichlet0.1_fedadam_fedprox_adamw
+  model: depth=8, dim=512, params=50.3M
+  FL: 4 clients × 20 rounds × 50 local steps
+  dist=dirichlet  agg=fedadam  reg=fedprox  opt=adamw  lr=0.0003
+  fl_batch_size=32
+======================================================================
+
+  Round   1/20 | global_val=7.8563 | local_train=7.8123 | local_val=7.0767  div=0.224 | 24.0s
+  Round   2/20 | global_val=8.2693 | local_train=7.0297 | local_val=6.5370  div=0.231 | 20.9s
+  Round   3/20 | global_val=6.8756 | local_train=6.7807 | local_val=6.2946  div=0.307 | 21.1s

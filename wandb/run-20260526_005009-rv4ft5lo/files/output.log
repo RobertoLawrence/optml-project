@@ -1,0 +1,57 @@
+
+======================================================================
+  Experiment: c4_dirichlet0.1_fedadam_fedprox_adamw
+  model: depth=8, dim=512, params=50.3M
+  FL: 4 clients × 20 rounds × 50 local steps
+  dist=dirichlet  agg=fedadam  reg=fedprox  opt=adamw  lr=0.0003
+  fl_batch_size=32
+======================================================================
+
+  Round   1/20 | global_val=7.8548 | local_train=7.8122 | local_val=7.0750  div=0.224 | 26.4s
+  Round   2/20 | global_val=8.3951 | local_train=7.0286 | local_val=6.5317  div=0.232 | 21.5s
+  Round   3/20 | global_val=6.8915 | local_train=6.7697 | local_val=6.2886  div=0.304 | 21.2s
+  Round   4/20 | global_val=6.8608 | local_train=6.4058 | local_val=6.0951  div=0.314 | 21.0s
+  Round   5/20 | global_val=6.2737 | local_train=6.2228 | local_val=5.9414  div=0.324 | 20.7s
+  Round   6/20 | global_val=6.4823 | local_train=6.0618 | local_val=5.8070  div=0.340 | 20.6s
+  Round   7/20 | global_val=6.0347 | local_train=5.9204 | local_val=5.6740  div=0.342 | 20.2s
+  Round   8/20 | global_val=5.8555 | local_train=5.7841 | local_val=5.5583  div=0.349 | 20.7s
+  Round   9/20 | global_val=5.6858 | local_train=5.6569 | local_val=5.4598  div=0.359 | 20.4s
+  Round  10/20 | global_val=5.5436 | local_train=5.5407 | local_val=5.3673  div=0.363 | 20.5s
+  Round  11/20 | global_val=5.4431 | local_train=5.4362 | local_val=5.2658  div=0.369 | 20.5s
+  Round  12/20 | global_val=5.3737 | local_train=5.3477 | local_val=5.1942  div=0.376 | 20.5s
+  Round  13/20 | global_val=5.3081 | local_train=5.2691 | local_val=5.1213  div=0.386 | 21.3s
+  Round  14/20 | global_val=5.2212 | local_train=5.1947 | local_val=5.0500  div=0.391 | 20.5s
+  Round  15/20 | global_val=5.1297 | local_train=5.1252 | local_val=4.9912  div=0.398 | 20.2s
+  Round  16/20 | global_val=5.0577 | local_train=5.0596 | local_val=4.9456  div=0.399 | 20.5s
+  Round  17/20 | global_val=4.9964 | local_train=4.9960 | local_val=4.8930  div=0.404 | 20.4s
+  Round  18/20 | global_val=4.9414 | local_train=4.9484 | local_val=4.8480  div=0.409 | 21.3s
+  Round  19/20 | global_val=4.8913 | local_train=4.8988 | local_val=4.8013  div=0.413 | 20.6s
+  Round  20/20 | global_val=4.8526 | local_train=4.8574 | local_val=4.7667  div=0.417 | 21.1s
+
+  FL done — 420s total, 21.0s/round
+  Running centralized baseline...
+  [baseline] 1000 steps, optimizer=adamw, lr=0.0003
+    step    50/1000 | train=7.7703 | val=7.5708 | lrm=0.980 | 13s
+    step   100/1000 | train=7.1692 | val=7.0290 | lrm=1.000 | 25s
+    step   150/1000 | train=6.5344 | val=6.3957 | lrm=1.000 | 36s
+    step   200/1000 | train=6.0209 | val=5.9520 | lrm=1.000 | 47s
+    step   250/1000 | train=5.6769 | val=5.6117 | lrm=1.000 | 59s
+    step   300/1000 | train=5.3931 | val=5.3515 | lrm=1.000 | 70s
+    step   350/1000 | train=5.1805 | val=5.1594 | lrm=1.000 | 81s
+    step   400/1000 | train=5.0148 | val=5.0001 | lrm=1.000 | 92s
+    step   450/1000 | train=4.8694 | val=4.8616 | lrm=1.000 | 104s
+    step   500/1000 | train=4.7543 | val=4.7620 | lrm=1.000 | 115s
+    step   550/1000 | train=4.6712 | val=4.6561 | lrm=1.000 | 126s
+    step   600/1000 | train=4.5654 | val=4.5993 | lrm=1.000 | 138s
+    step   650/1000 | train=4.4994 | val=4.5078 | lrm=1.000 | 149s
+    step   700/1000 | train=4.4237 | val=4.4553 | lrm=1.000 | 160s
+    step   750/1000 | train=4.3526 | val=4.3880 | lrm=0.853 | 171s
+    step   800/1000 | train=4.2950 | val=4.3129 | lrm=0.703 | 183s
+    step   850/1000 | train=4.2422 | val=4.2762 | lrm=0.553 | 194s
+    step   900/1000 | train=4.1870 | val=4.2301 | lrm=0.403 | 205s
+    step   950/1000 | train=4.1541 | val=4.1951 | lrm=0.253 | 217s
+    step  1000/1000 | train=4.1260 | val=4.1810 | lrm=0.103 | 228s
+  [baseline] done in 228s
+  Result saved → /mloscratch/homes/goelzer/optml-project/results/c4_dirichlet0.1_fedadam_fedprox_adamw/history.json
+  Figure saved → /mloscratch/homes/goelzer/optml-project/figs/c4_dirichlet0.1_fedadam_fedprox_adamw_2026-05-26_01-01-05.png
+  [34/120] DONE in 662s | completed=34/120 | ETA ~28 min

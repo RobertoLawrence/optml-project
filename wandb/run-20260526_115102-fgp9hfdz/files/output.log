@@ -1,0 +1,57 @@
+
+======================================================================
+  Experiment: c32_multi_language_fedavg_none_adamw
+  model: depth=8, dim=512, params=50.3M
+  FL: 32 clients × 20 rounds × 50 local steps
+  dist=multi_language  agg=fedavg  reg=None  opt=adamw  lr=0.0003
+  fl_batch_size=4
+======================================================================
+
+  Round   1/20 | global_val=7.5252 | local_train=7.9027 | local_val=7.5172  div=0.249 | 61.3s
+  Round   2/20 | global_val=7.1929 | local_train=7.4152 | local_val=7.1432  div=0.146 | 43.6s
+  Round   3/20 | global_val=6.9295 | local_train=7.1324 | local_val=6.8785  div=0.210 | 44.1s
+  Round   4/20 | global_val=6.6919 | local_train=6.8735 | local_val=6.6478  div=0.239 | 43.7s
+  Round   5/20 | global_val=6.4778 | local_train=6.6624 | local_val=6.3871  div=0.279 | 41.6s
+  Round   6/20 | global_val=6.3390 | local_train=6.4883 | local_val=6.2253  div=0.327 | 42.5s
+  Round   7/20 | global_val=6.2070 | local_train=6.3529 | local_val=6.0967  div=0.363 | 41.4s
+  Round   8/20 | global_val=6.0974 | local_train=6.2446 | local_val=5.9961  div=0.400 | 42.3s
+  Round   9/20 | global_val=6.0107 | local_train=6.1424 | local_val=5.8976  div=0.423 | 43.1s
+  Round  10/20 | global_val=5.9138 | local_train=6.0538 | local_val=5.8139  div=0.441 | 42.8s
+  Round  11/20 | global_val=5.8346 | local_train=5.9616 | local_val=5.7313  div=0.459 | 41.2s
+  Round  12/20 | global_val=5.7494 | local_train=5.8790 | local_val=5.6374  div=0.473 | 43.0s
+  Round  13/20 | global_val=5.6665 | local_train=5.7946 | local_val=5.5624  div=0.486 | 41.2s
+  Round  14/20 | global_val=5.5769 | local_train=5.7128 | local_val=5.4771  div=0.499 | 42.4s
+  Round  15/20 | global_val=5.5108 | local_train=5.6394 | local_val=5.4076  div=0.513 | 41.7s
+  Round  16/20 | global_val=5.4447 | local_train=5.5647 | local_val=5.3360  div=0.528 | 41.2s
+  Round  17/20 | global_val=5.3796 | local_train=5.4971 | local_val=5.2757  div=0.536 | 41.2s
+  Round  18/20 | global_val=5.3249 | local_train=5.4528 | local_val=5.2272  div=0.551 | 40.8s
+  Round  19/20 | global_val=5.2790 | local_train=5.3916 | local_val=5.1811  div=0.560 | 42.5s
+  Round  20/20 | global_val=5.2294 | local_train=5.3435 | local_val=5.1329  div=0.570 | 41.8s
+
+  FL done — 864s total, 43.2s/round
+  Running centralized baseline...
+  [baseline] 1000 steps, optimizer=adamw, lr=0.0003
+    step    50/1000 | train=7.7703 | val=7.5708 | lrm=0.980 | 13s
+    step   100/1000 | train=7.1692 | val=7.0291 | lrm=1.000 | 25s
+    step   150/1000 | train=6.5361 | val=6.4326 | lrm=1.000 | 36s
+    step   200/1000 | train=6.0181 | val=5.9449 | lrm=1.000 | 47s
+    step   250/1000 | train=5.6729 | val=5.6197 | lrm=1.000 | 59s
+    step   300/1000 | train=5.3911 | val=5.3507 | lrm=1.000 | 70s
+    step   350/1000 | train=5.1777 | val=5.1685 | lrm=1.000 | 81s
+    step   400/1000 | train=5.0143 | val=5.0066 | lrm=1.000 | 92s
+    step   450/1000 | train=4.8695 | val=4.8674 | lrm=1.000 | 104s
+    step   500/1000 | train=4.7572 | val=4.7659 | lrm=1.000 | 115s
+    step   550/1000 | train=4.6727 | val=4.6639 | lrm=1.000 | 126s
+    step   600/1000 | train=4.5665 | val=4.5967 | lrm=1.000 | 138s
+    step   650/1000 | train=4.5016 | val=4.5079 | lrm=1.000 | 149s
+    step   700/1000 | train=4.4240 | val=4.4516 | lrm=1.000 | 160s
+    step   750/1000 | train=4.3559 | val=4.3855 | lrm=0.853 | 171s
+    step   800/1000 | train=4.2971 | val=4.3203 | lrm=0.703 | 183s
+    step   850/1000 | train=4.2454 | val=4.2795 | lrm=0.553 | 194s
+    step   900/1000 | train=4.1890 | val=4.2324 | lrm=0.403 | 205s
+    step   950/1000 | train=4.1566 | val=4.1982 | lrm=0.253 | 216s
+    step  1000/1000 | train=4.1282 | val=4.1835 | lrm=0.103 | 228s
+  [baseline] done in 228s
+  Result saved → /mloscratch/homes/goelzer/optml-project/results/c32_multi_language_fedavg_none_adamw/history.json
+  Figure saved → /mloscratch/homes/goelzer/optml-project/figs/c32_multi_language_fedavg_none_adamw_2026-05-26_12-09-18.png
+  [61/120] DONE in 1097s | completed=61/120 | ETA ~133 min

@@ -1,0 +1,21 @@
+
+======================================================================
+  Experiment: c4_dirichlet2.0_fedavg_none_adam
+  model: depth=8, dim=512, params=50.3M
+  FL: 4 clients × 20 rounds × 50 local steps
+  dist=dirichlet  agg=fedavg  reg=None  opt=adam  lr=0.0003
+  fl_batch_size=32
+======================================================================
+
+  Round   1/20 | global_val=7.3743 | local_train=7.7984 | local_val=7.2471  div=0.104 | 22.3s
+  Round   2/20 | global_val=6.7798 | local_train=7.0972 | local_val=6.6447  div=0.048 | 19.7s
+  Round   3/20 | global_val=6.3699 | local_train=6.6267 | local_val=6.2820  div=0.082 | 19.6s
+  Round   4/20 | global_val=6.0832 | local_train=6.2674 | local_val=6.0276  div=0.112 | 19.8s
+  Round   5/20 | global_val=5.8379 | local_train=6.0051 | local_val=5.8110  div=0.137 | 19.6s
+  Round   6/20 | global_val=5.6380 | local_train=5.7801 | local_val=5.6114  div=0.166 | 19.5s
+  Round   7/20 | global_val=5.4476 | local_train=5.5956 | local_val=5.4442  div=0.185 | 19.7s
+  Round   8/20 | global_val=5.2820 | local_train=5.4143 | local_val=5.2876  div=0.215 | 20.4s
+  Round   9/20 | global_val=5.1638 | local_train=5.2697 | local_val=5.1622  div=0.238 | 19.9s
+  Round  10/20 | global_val=5.0471 | local_train=5.1500 | local_val=5.0627  div=0.262 | 20.1s
+  Round  11/20 | global_val=4.9574 | local_train=5.0384 | local_val=4.9712  div=0.285 | 20.1s
+  Round  12/20 | global_val=4.8706 | local_train=4.9555 | local_val=4.8821  div=0.301 | 19.8s

@@ -1,0 +1,57 @@
+
+======================================================================
+  Experiment: c4_dirichlet2.0_fedadam_fedprox_adamw
+  model: depth=8, dim=512, params=50.3M
+  FL: 4 clients × 20 rounds × 50 local steps
+  dist=dirichlet  agg=fedadam  reg=fedprox  opt=adamw  lr=0.0003
+  fl_batch_size=32
+======================================================================
+
+  Round   1/20 | global_val=7.8471 | local_train=7.9539 | local_val=7.3377  div=0.070 | 23.6s
+  Round   2/20 | global_val=7.9070 | local_train=7.2901 | local_val=6.8854  div=0.056 | 20.4s
+  Round   3/20 | global_val=7.1175 | local_train=7.0109 | local_val=6.6740  div=0.086 | 21.0s
+  Round   4/20 | global_val=6.9636 | local_train=6.7406 | local_val=6.4598  div=0.094 | 20.8s
+  Round   5/20 | global_val=6.5447 | local_train=6.5093 | local_val=6.2324  div=0.096 | 20.3s
+  Round   6/20 | global_val=6.5037 | local_train=6.2829 | local_val=6.0661  div=0.106 | 20.5s
+  Round   7/20 | global_val=6.1774 | local_train=6.1172 | local_val=5.9274  div=0.124 | 20.5s
+  Round   8/20 | global_val=6.0146 | local_train=5.9503 | local_val=5.7907  div=0.143 | 20.5s
+  Round   9/20 | global_val=5.8823 | local_train=5.8287 | local_val=5.6739  div=0.157 | 20.2s
+  Round  10/20 | global_val=5.6618 | local_train=5.6995 | local_val=5.5690  div=0.175 | 20.1s
+  Round  11/20 | global_val=5.5455 | local_train=5.5709 | local_val=5.4690  div=0.193 | 20.1s
+  Round  12/20 | global_val=5.4457 | local_train=5.4880 | local_val=5.3761  div=0.210 | 20.3s
+  Round  13/20 | global_val=5.3385 | local_train=5.3938 | local_val=5.3081  div=0.225 | 20.4s
+  Round  14/20 | global_val=5.2577 | local_train=5.3059 | local_val=5.2356  div=0.239 | 20.5s
+  Round  15/20 | global_val=5.2019 | local_train=5.2313 | local_val=5.1615  div=0.251 | 20.2s
+  Round  16/20 | global_val=5.1262 | local_train=5.1727 | local_val=5.1116  div=0.262 | 20.1s
+  Round  17/20 | global_val=5.0626 | local_train=5.1060 | local_val=5.0518  div=0.274 | 20.6s
+  Round  18/20 | global_val=5.0157 | local_train=5.0581 | local_val=5.0053  div=0.285 | 20.8s
+  Round  19/20 | global_val=4.9735 | local_train=5.0055 | local_val=4.9606  div=0.291 | 20.9s
+  Round  20/20 | global_val=4.9195 | local_train=4.9468 | local_val=4.9199  div=0.301 | 21.0s
+
+  FL done — 413s total, 20.6s/round
+  Running centralized baseline...
+  [baseline] 1000 steps, optimizer=adamw, lr=0.0003
+    step    50/1000 | train=7.7703 | val=7.5708 | lrm=0.980 | 13s
+    step   100/1000 | train=7.1692 | val=7.0291 | lrm=1.000 | 25s
+    step   150/1000 | train=6.5354 | val=6.4058 | lrm=1.000 | 36s
+    step   200/1000 | train=6.0218 | val=5.9541 | lrm=1.000 | 47s
+    step   250/1000 | train=5.6768 | val=5.6103 | lrm=1.000 | 59s
+    step   300/1000 | train=5.3967 | val=5.3622 | lrm=1.000 | 70s
+    step   350/1000 | train=5.1821 | val=5.1501 | lrm=1.000 | 81s
+    step   400/1000 | train=5.0143 | val=5.0042 | lrm=1.000 | 93s
+    step   450/1000 | train=4.8716 | val=4.8656 | lrm=1.000 | 104s
+    step   500/1000 | train=4.7562 | val=4.7564 | lrm=1.000 | 115s
+    step   550/1000 | train=4.6704 | val=4.6582 | lrm=1.000 | 127s
+    step   600/1000 | train=4.5665 | val=4.5955 | lrm=1.000 | 138s
+    step   650/1000 | train=4.4995 | val=4.4963 | lrm=1.000 | 149s
+    step   700/1000 | train=4.4242 | val=4.4597 | lrm=1.000 | 161s
+    step   750/1000 | train=4.3534 | val=4.3896 | lrm=0.853 | 172s
+    step   800/1000 | train=4.2949 | val=4.3181 | lrm=0.703 | 183s
+    step   850/1000 | train=4.2430 | val=4.2768 | lrm=0.553 | 195s
+    step   900/1000 | train=4.1874 | val=4.2306 | lrm=0.403 | 206s
+    step   950/1000 | train=4.1546 | val=4.1958 | lrm=0.253 | 217s
+    step  1000/1000 | train=4.1265 | val=4.1818 | lrm=0.103 | 229s
+  [baseline] done in 229s
+  Result saved → /mloscratch/homes/goelzer/optml-project/results/c4_dirichlet2.0_fedadam_fedprox_adamw/history.json
+  Figure saved → /mloscratch/homes/goelzer/optml-project/figs/c4_dirichlet2.0_fedadam_fedprox_adamw_2026-05-26_11-28-03.png
+  [58/120] DONE in 647s | completed=58/120 | ETA ~103 min

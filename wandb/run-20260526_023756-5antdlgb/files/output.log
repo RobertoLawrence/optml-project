@@ -1,0 +1,57 @@
+
+======================================================================
+  Experiment: c4_dirichlet0.5_fedadam_none_adam
+  model: depth=8, dim=512, params=50.3M
+  FL: 4 clients × 20 rounds × 50 local steps
+  dist=dirichlet  agg=fedadam  reg=None  opt=adam  lr=0.0003
+  fl_batch_size=32
+======================================================================
+
+  Round   1/20 | global_val=7.7277 | local_train=7.7441 | local_val=7.1829  div=0.167 | 23.3s
+  Round   2/20 | global_val=7.6023 | local_train=7.0147 | local_val=6.5949  div=0.132 | 20.6s
+  Round   3/20 | global_val=6.7362 | local_train=6.6209 | local_val=6.3727  div=0.144 | 21.0s
+  Round   4/20 | global_val=6.5440 | local_train=6.3709 | local_val=6.2253  div=0.153 | 20.0s
+  Round   5/20 | global_val=6.3354 | local_train=6.2192 | local_val=6.1115  div=0.164 | 20.5s
+  Round   6/20 | global_val=6.2395 | local_train=6.0944 | local_val=6.0229  div=0.175 | 20.6s
+  Round   7/20 | global_val=6.1621 | local_train=6.0033 | local_val=5.9332  div=0.183 | 20.6s
+  Round   8/20 | global_val=6.0894 | local_train=5.9153 | local_val=5.8345  div=0.181 | 20.4s
+  Round   9/20 | global_val=6.0028 | local_train=5.8009 | local_val=5.7248  div=0.183 | 20.4s
+  Round  10/20 | global_val=5.8807 | local_train=5.7042 | local_val=5.6273  div=0.190 | 20.5s
+  Round  11/20 | global_val=5.7720 | local_train=5.6049 | local_val=5.5185  div=0.193 | 20.6s
+  Round  12/20 | global_val=5.6171 | local_train=5.5037 | local_val=5.4246  div=0.203 | 19.9s
+  Round  13/20 | global_val=5.4578 | local_train=5.4003 | local_val=5.3590  div=0.217 | 19.8s
+  Round  14/20 | global_val=5.3355 | local_train=5.3172 | local_val=5.2854  div=0.219 | 19.7s
+  Round  15/20 | global_val=5.2751 | local_train=5.2319 | local_val=5.2153  div=0.237 | 19.7s
+  Round  16/20 | global_val=5.2088 | local_train=5.1726 | local_val=5.1693  div=0.239 | 19.9s
+  Round  17/20 | global_val=5.1376 | local_train=5.1070 | local_val=5.1093  div=0.249 | 20.0s
+  Round  18/20 | global_val=5.0796 | local_train=5.0459 | local_val=5.0603  div=0.258 | 19.8s
+  Round  19/20 | global_val=5.0267 | local_train=4.9857 | local_val=5.0251  div=0.264 | 20.0s
+  Round  20/20 | global_val=4.9665 | local_train=4.9419 | local_val=4.9751  div=0.270 | 20.1s
+
+  FL done — 408s total, 20.4s/round
+  Running centralized baseline...
+  [baseline] 1000 steps, optimizer=adam, lr=0.0003
+    step    50/1000 | train=7.7702 | val=7.5707 | lrm=0.980 | 13s
+    step   100/1000 | train=7.1689 | val=7.0295 | lrm=1.000 | 25s
+    step   150/1000 | train=6.5417 | val=6.4043 | lrm=1.000 | 36s
+    step   200/1000 | train=6.0169 | val=5.9468 | lrm=1.000 | 47s
+    step   250/1000 | train=5.6767 | val=5.6147 | lrm=1.000 | 58s
+    step   300/1000 | train=5.3948 | val=5.3529 | lrm=1.000 | 70s
+    step   350/1000 | train=5.1794 | val=5.1530 | lrm=1.000 | 81s
+    step   400/1000 | train=5.0150 | val=5.0104 | lrm=1.000 | 92s
+    step   450/1000 | train=4.8719 | val=4.8655 | lrm=1.000 | 104s
+    step   500/1000 | train=4.7577 | val=4.7596 | lrm=1.000 | 115s
+    step   550/1000 | train=4.6763 | val=4.6766 | lrm=1.000 | 126s
+    step   600/1000 | train=4.5690 | val=4.5976 | lrm=1.000 | 138s
+    step   650/1000 | train=4.5057 | val=4.5106 | lrm=1.000 | 149s
+    step   700/1000 | train=4.4320 | val=4.4623 | lrm=1.000 | 160s
+    step   750/1000 | train=4.3622 | val=4.3917 | lrm=0.853 | 172s
+    step   800/1000 | train=4.3017 | val=4.3206 | lrm=0.703 | 183s
+    step   850/1000 | train=4.2511 | val=4.2869 | lrm=0.553 | 194s
+    step   900/1000 | train=4.1942 | val=4.2380 | lrm=0.403 | 205s
+    step   950/1000 | train=4.1619 | val=4.2035 | lrm=0.253 | 217s
+    step  1000/1000 | train=4.1336 | val=4.1899 | lrm=0.103 | 228s
+  [baseline] done in 228s
+  Result saved → /mloscratch/homes/goelzer/optml-project/results/c4_dirichlet0.5_fedadam_none_adam/history.json
+  Figure saved → /mloscratch/homes/goelzer/optml-project/figs/c4_dirichlet0.5_fedadam_none_adam_2026-05-26_02-48-36.png
+  [44/120] DONE in 641s | completed=44/120 | ETA ~205 min

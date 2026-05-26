@@ -1,0 +1,26 @@
+
+======================================================================
+  Experiment: c4_multi_language_fedadam_fedprox_sgd
+  model: depth=8, dim=512, params=50.3M
+  FL: 4 clients × 20 rounds × 50 local steps
+  dist=multi_language  agg=fedadam  reg=fedprox  opt=sgd  lr=0.05
+  fl_batch_size=4
+======================================================================
+
+  Round   1/20 | global_val=8.0096 | local_train=8.0578 | local_val=7.4028  div=0.068 | 9.2s
+  Round   2/20 | global_val=7.6963 | local_train=7.5429 | local_val=7.2364  div=0.040 | 6.6s
+  Round   3/20 | global_val=7.3079 | local_train=7.3468 | local_val=7.1308  div=0.082 | 6.6s
+  Round   4/20 | global_val=7.2754 | local_train=7.2067 | local_val=6.9601  div=0.109 | 6.8s
+  Round   5/20 | global_val=7.1517 | local_train=7.0675 | local_val=6.8001  div=0.107 | 7.1s
+  Round   6/20 | global_val=7.0859 | local_train=6.9335 | local_val=6.6614  div=0.127 | 6.8s
+  Round   7/20 | global_val=6.9035 | local_train=6.7995 | local_val=6.5360  div=0.150 | 7.3s
+  Round   8/20 | global_val=6.8836 | local_train=6.6612 | local_val=6.4093  div=0.166 | 6.8s
+  Round   9/20 | global_val=6.8538 | local_train=6.5402 | local_val=6.3003  div=0.177 | 6.8s
+  Round  10/20 | global_val=6.7202 | local_train=6.3997 | local_val=6.1603  div=0.179 | 6.9s
+  Round  11/20 | global_val=6.5332 | local_train=6.2822 | local_val=6.0278  div=0.191 | 6.8s
+  Round  12/20 | global_val=6.3271 | local_train=6.1754 | local_val=5.9356  div=0.199 | 6.8s
+  Round  13/20 | global_val=6.1194 | local_train=6.0992 | local_val=5.8302  div=0.215 | 6.7s
+  Round  14/20 | global_val=6.0020 | local_train=5.9694 | local_val=5.7342  div=0.229 | 6.8s
+  Round  15/20 | global_val=5.9052 | local_train=5.9036 | local_val=5.6484  div=0.237 | 6.9s
+  Round  16/20 | global_val=5.8386 | local_train=5.8208 | local_val=5.5818  div=0.251 | 6.9s
+  Round  17/20 | global_val=5.7213 | local_train=5.7314 | local_val=5.4790  div=0.266 | 7.2s

@@ -1,0 +1,57 @@
+
+======================================================================
+  Experiment: c4_multi_language_fedavg_fedprox_adamw
+  model: depth=8, dim=512, params=50.3M
+  FL: 4 clients × 20 rounds × 50 local steps
+  dist=multi_language  agg=fedavg  reg=fedprox  opt=adamw  lr=0.0003
+  fl_batch_size=32
+======================================================================
+
+  Round   1/20 | global_val=7.4437 | local_train=7.9625 | local_val=7.3612  div=0.052 | 23.3s
+  Round   2/20 | global_val=7.0097 | local_train=7.3160 | local_val=6.9397  div=0.055 | 20.2s
+  Round   3/20 | global_val=6.7883 | local_train=7.0638 | local_val=6.6942  div=0.083 | 20.4s
+  Round   4/20 | global_val=6.5684 | local_train=6.8510 | local_val=6.4468  div=0.096 | 20.3s
+  Round   5/20 | global_val=6.3673 | local_train=6.6906 | local_val=6.2191  div=0.103 | 20.4s
+  Round   6/20 | global_val=6.2116 | local_train=6.5052 | local_val=6.0399  div=0.118 | 20.1s
+  Round   7/20 | global_val=6.0719 | local_train=6.3732 | local_val=5.9023  div=0.139 | 20.4s
+  Round   8/20 | global_val=5.9491 | local_train=6.1903 | local_val=5.7818  div=0.149 | 20.1s
+  Round   9/20 | global_val=5.8522 | local_train=6.0358 | local_val=5.6831  div=0.159 | 20.2s
+  Round  10/20 | global_val=5.7478 | local_train=5.9262 | local_val=5.5863  div=0.173 | 20.5s
+  Round  11/20 | global_val=5.6623 | local_train=5.8431 | local_val=5.4864  div=0.189 | 20.2s
+  Round  12/20 | global_val=5.5803 | local_train=5.7329 | local_val=5.4056  div=0.204 | 20.8s
+  Round  13/20 | global_val=5.5053 | local_train=5.6559 | local_val=5.3276  div=0.220 | 20.3s
+  Round  14/20 | global_val=5.4293 | local_train=5.5802 | local_val=5.2583  div=0.237 | 20.3s
+  Round  15/20 | global_val=5.3813 | local_train=5.5199 | local_val=5.2039  div=0.254 | 20.2s
+  Round  16/20 | global_val=5.3308 | local_train=5.4644 | local_val=5.1487  div=0.270 | 20.1s
+  Round  17/20 | global_val=5.2806 | local_train=5.4109 | local_val=5.0987  div=0.282 | 20.1s
+  Round  18/20 | global_val=5.2382 | local_train=5.3816 | local_val=5.0663  div=0.296 | 20.3s
+  Round  19/20 | global_val=5.2089 | local_train=5.3370 | local_val=5.0253  div=0.311 | 20.4s
+  Round  20/20 | global_val=5.1696 | local_train=5.2891 | local_val=4.9976  div=0.320 | 20.6s
+
+  FL done — 409s total, 20.5s/round
+  Running centralized baseline...
+  [baseline] 1000 steps, optimizer=adamw, lr=0.0003
+    step    50/1000 | train=7.7703 | val=7.5708 | lrm=0.980 | 14s
+    step   100/1000 | train=7.1692 | val=7.0292 | lrm=1.000 | 25s
+    step   150/1000 | train=6.5288 | val=6.3917 | lrm=1.000 | 36s
+    step   200/1000 | train=6.0121 | val=5.9366 | lrm=1.000 | 47s
+    step   250/1000 | train=5.6717 | val=5.6066 | lrm=1.000 | 59s
+    step   300/1000 | train=5.3919 | val=5.3603 | lrm=1.000 | 70s
+    step   350/1000 | train=5.1797 | val=5.1552 | lrm=1.000 | 81s
+    step   400/1000 | train=5.0128 | val=5.0002 | lrm=1.000 | 92s
+    step   450/1000 | train=4.8688 | val=4.8629 | lrm=1.000 | 104s
+    step   500/1000 | train=4.7500 | val=4.7563 | lrm=1.000 | 115s
+    step   550/1000 | train=4.6671 | val=4.6567 | lrm=1.000 | 126s
+    step   600/1000 | train=4.5643 | val=4.5942 | lrm=1.000 | 137s
+    step   650/1000 | train=4.5010 | val=4.5072 | lrm=1.000 | 149s
+    step   700/1000 | train=4.4241 | val=4.4577 | lrm=1.000 | 160s
+    step   750/1000 | train=4.3561 | val=4.3882 | lrm=0.853 | 171s
+    step   800/1000 | train=4.2969 | val=4.3198 | lrm=0.703 | 183s
+    step   850/1000 | train=4.2446 | val=4.2793 | lrm=0.553 | 194s
+    step   900/1000 | train=4.1885 | val=4.2318 | lrm=0.403 | 205s
+    step   950/1000 | train=4.1561 | val=4.1974 | lrm=0.253 | 216s
+    step  1000/1000 | train=4.1272 | val=4.1829 | lrm=0.103 | 228s
+  [baseline] done in 228s
+  Result saved → /mloscratch/homes/goelzer/optml-project/results/c4_multi_language_fedavg_fedprox_adamw/history.json
+  Figure saved → /mloscratch/homes/goelzer/optml-project/figs/c4_multi_language_fedavg_fedprox_adamw_2026-05-25_17-22-26.png
+  [4/120] DONE in 642s | completed=4/120 | ETA ~1256 min
