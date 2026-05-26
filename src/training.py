@@ -331,7 +331,6 @@ def run_fl_experiment(
         client_weights:      List = []
         round_train_losses:  List = []
         round_val_losses:    List = []
-        client_deltas:       List = []
 
         # ---- per-client local training ----
         for ci in range(exp_config.num_clients):
@@ -388,9 +387,6 @@ def run_fl_experiment(
             client_sd_cpu = {k: v.detach().cpu() for k, v in client_base.state_dict().items()}
             client_state_dicts.append(client_sd_cpu)
 
-            if exp_config.track_grad_divergence:
-                client_deltas.append(params_to_vec(client_sd_cpu) - global_vec)
-
             del opt, loader
             if device.type == "cuda":
                 torch.cuda.empty_cache()
@@ -413,14 +409,34 @@ def run_fl_experiment(
             history["global_val_loss"].append(gval)
 
         # ---- optional metrics ----
-        if exp_config.track_grad_divergence and client_deltas:
-            mean_delta = torch.stack(client_deltas).mean(0)
-            cos_sims = [
-                torch.nn.functional.cosine_similarity(
-                    d.unsqueeze(0), mean_delta.unsqueeze(0)
-                ).item()
-                for d in client_deltas
-            ]
+        if exp_config.track_grad_divergence and global_vec is not None:
+            # Two-pass approach: avoids stacking C×50M tensors simultaneously.
+            # torch.stack(32 deltas) would materialise ~6.4 GB on CPU for c32,
+            # causing RAM exhaustion and hanging torch.cat calls.
+            # Instead we stream through client_state_dicts twice, keeping at most
+            # 3×200 MB in memory at any time (global_vec + delta + mean_delta).
+
+            # Pass 1: incremental mean delta
+            mean_delta = torch.zeros_like(global_vec)
+            n = len(client_state_dicts)
+            for sd in client_state_dicts:
+                delta = params_to_vec(sd)
+                delta.sub_(global_vec)
+                mean_delta.add_(delta.div_(n))
+                del delta
+
+            # Pass 2: cosine similarities
+            cos_sims = []
+            for sd in client_state_dicts:
+                delta = params_to_vec(sd).sub_(global_vec)
+                cos_sims.append(
+                    torch.nn.functional.cosine_similarity(
+                        delta.unsqueeze(0), mean_delta.unsqueeze(0)
+                    ).item()
+                )
+                del delta
+            del mean_delta
+
             history["grad_divergence"].append(1.0 - float(np.mean(cos_sims)))
 
         if exp_config.track_comm_cost:
@@ -470,7 +486,7 @@ def run_fl_experiment(
     del global_model, eval_model, client_base, compiled_client
     if server_opt is not None:
         del server_opt
-    del client_state_dicts, client_deltas, global_sd_cpu
+    del client_state_dicts, global_sd_cpu
     gc.collect()
     try:
         torch._dynamo.reset()
