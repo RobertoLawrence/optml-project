@@ -1,0 +1,28 @@
+
+======================================================================
+  Experiment: c32_single_language_fedavg_fedprox_adamw
+  model: depth=8, dim=512, params=50.3M
+  FL: 32 clients × 20 rounds × 50 local steps
+  dist=single_language  agg=fedavg  reg=fedprox  opt=adamw  lr=0.0003
+  fl_batch_size=4
+======================================================================
+
+  Round   1/20 | global_val=7.8996 | local_train=7.7725 | local_val=7.1379  div=0.330 | 58.0s
+  Round   2/20 | global_val=7.4762 | local_train=7.2681 | local_val=6.8741  div=0.303 | 55.5s
+  Round   3/20 | global_val=7.2666 | local_train=7.0214 | local_val=6.6223  div=0.380 | 57.9s
+  Round   4/20 | global_val=7.1187 | local_train=6.8217 | local_val=6.4975  div=0.456 | 56.5s
+  Round   5/20 | global_val=7.0116 | local_train=6.6996 | local_val=6.4106  div=0.502 | 58.5s
+  Round   6/20 | global_val=6.9443 | local_train=6.6063 | local_val=6.3405  div=0.528 | 58.9s
+  Round   7/20 | global_val=6.8770 | local_train=6.5218 | local_val=6.2717  div=0.548 | 60.3s
+  Round   8/20 | global_val=6.8111 | local_train=6.4532 | local_val=6.2119  div=0.567 | 158.6s
+  Round   9/20 | global_val=6.7574 | local_train=6.3843 | local_val=6.1532  div=0.584 | 366.2s
+wandb: WARNING Fatal error while uploading data. Some run data will not be synced, but it will still be written to disk. Use `wandb sync` at the end of the run to try uploading.
+  Round  10/20 | global_val=6.7044 | local_train=6.3232 | local_val=6.1126  div=0.597 | 3490.2s
+  Round  11/20 | global_val=6.6609 | local_train=6.2771 | local_val=6.0652  div=0.607 | 1247.8s
+  Round  12/20 | global_val=6.6115 | local_train=6.2230 | local_val=6.0212  div=0.616 | 1137.2s
+  Round  13/20 | global_val=6.5655 | local_train=6.1761 | local_val=5.9679  div=0.621 | 1065.9s
+  Round  14/20 | global_val=6.5269 | local_train=6.1258 | local_val=5.9282  div=0.626 | 1219.7s
+  Round  15/20 | global_val=6.4850 | local_train=6.0869 | local_val=5.8934  div=0.628 | 1127.9s
+  Round  16/20 | global_val=6.4403 | local_train=6.0394 | local_val=5.8489  div=0.632 | 1290.9s
+  Round  17/20 | global_val=6.3973 | local_train=5.9968 | local_val=5.8153  div=0.633 | 1212.5s
+  Round  18/20 | global_val=6.3524 | local_train=5.9526 | local_val=5.7571  div=0.637 | 1094.8s

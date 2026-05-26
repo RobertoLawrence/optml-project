@@ -1,0 +1,1 @@
+{"fl/local_val_loss":5.13063580840826,"fl/global_val_loss":5.228815388679505,"fl/round":20,"baseline/val_loss":4.189704275131225,"fl/local_train_loss":5.341252912580967,"baseline/step":1000,"_timestamp":1.779791200408109e+09,"baseline/train_loss":4.133563037594977,"_step":39,"_wandb":{"runtime":1039},"_runtime":1039,"fl/grad_divergence":0.6271360060200095}

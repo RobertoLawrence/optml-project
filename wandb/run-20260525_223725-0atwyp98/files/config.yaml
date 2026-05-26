@@ -1,0 +1,94 @@
+_wandb:
+    value:
+        cli_version: 0.27.0
+        e:
+            dch1d9yydbta5ps4pzaj5lhunxo9z0ua:
+                args:
+                    - --local-steps
+                    - "50"
+                    - --results-dir
+                    - results_bs128_steps50
+                    - --wandb
+                    - --wandb-project
+                    - optml-fedlearning-bs128-steps50
+                codePath: main.py
+                codePathLocal: main.py
+                cpu_count: 64
+                cpu_count_logical: 128
+                cudaVersion: "13.0"
+                disk:
+                    /:
+                        total: "7679362727936"
+                        used: "4313380556800"
+                email: roberto.goelzer@epfl.ch
+                executable: /mloscratch/homes/goelzer/optml-project/.venv/bin/python
+                git:
+                    commit: b43def72227cb4aa3b146d86990d9e3c7c9e09ce
+                    remote: git@github.com:RobertoLawrence/optml-project.git
+                gpu: NVIDIA A100-SXM4-80GB
+                gpu_count: 1
+                gpu_nvidia:
+                    - architecture: Ampere
+                      cudaCores: 6912
+                      memoryTotal: "85899345920"
+                      name: NVIDIA A100-SXM4-80GB
+                      uuid: GPU-330b94fa-0daf-9a72-5a17-135faae05e20
+                host: experiment-0-0
+                memory:
+                    total: "1081885036544"
+                os: Linux-6.8.0-59-generic-x86_64-with-glibc2.35
+                program: /mloscratch/homes/goelzer/optml-project/main.py
+                python: CPython 3.10.12
+                root: /mloscratch/homes/goelzer/optml-project
+                startedAt: "2026-05-25T20:37:25.519810Z"
+                writerId: dch1d9yydbta5ps4pzaj5lhunxo9z0ua
+        m: []
+        python_version: 3.10.12
+        t:
+            "1":
+                - 1
+            "2":
+                - 1
+            "3":
+                - 2
+                - 13
+                - 16
+                - 61
+            "4": 3.10.12
+            "5": 0.27.0
+            "10":
+                - 20
+            "12": 0.27.0
+            "13": linux-x86_64
+aggregator:
+    value: fedavg
+client_regularization:
+    value: fedprox
+data_distribution:
+    value: dirichlet
+dirichlet_alpha:
+    value: 0.1
+eval_batches_fl:
+    value: 20
+eval_every_n_rounds:
+    value: 1
+fedadam_lr:
+    value: 0.01
+fedprox_mu:
+    value: 0.01
+local_steps:
+    value: 50
+num_clients:
+    value: 4
+num_rounds:
+    value: 20
+optimizer:
+    value: adam
+run_baseline:
+    value: true
+tokens_per_client:
+    value: null
+track_comm_cost:
+    value: true
+track_grad_divergence:
+    value: true

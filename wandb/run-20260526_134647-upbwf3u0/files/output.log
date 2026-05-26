@@ -1,0 +1,57 @@
+
+======================================================================
+  Experiment: c32_multi_language_fedadam_none_adamw
+  model: depth=8, dim=512, params=50.3M
+  FL: 32 clients × 20 rounds × 50 local steps
+  dist=multi_language  agg=fedadam  reg=None  opt=adamw  lr=0.0003
+  fl_batch_size=4
+======================================================================
+
+  Round   1/20 | global_val=8.2513 | local_train=7.9027 | local_val=7.5172  div=0.249 | 45.3s
+  Round   2/20 | global_val=7.6065 | local_train=7.5694 | local_val=7.3310  div=0.062 | 39.8s
+  Round   3/20 | global_val=7.5085 | local_train=7.3660 | local_val=7.1431  div=0.104 | 40.1s
+  Round   4/20 | global_val=7.3073 | local_train=7.2495 | local_val=7.0300  div=0.119 | 39.9s
+  Round   5/20 | global_val=7.6099 | local_train=7.1542 | local_val=6.9587  div=0.132 | 40.3s
+  Round   6/20 | global_val=7.3081 | local_train=7.0916 | local_val=6.9027  div=0.132 | 40.5s
+  Round   7/20 | global_val=7.0167 | local_train=7.0130 | local_val=6.8204  div=0.138 | 40.8s
+  Round   8/20 | global_val=6.9825 | local_train=6.9353 | local_val=6.7367  div=0.139 | 41.9s
+  Round   9/20 | global_val=6.9347 | local_train=6.8587 | local_val=6.6581  div=0.133 | 39.5s
+  Round  10/20 | global_val=6.7710 | local_train=6.7642 | local_val=6.5341  div=0.130 | 40.9s
+  Round  11/20 | global_val=6.7063 | local_train=6.6603 | local_val=6.4341  div=0.137 | 40.9s
+  Round  12/20 | global_val=6.6983 | local_train=6.5911 | local_val=6.3436  div=0.150 | 39.5s
+  Round  13/20 | global_val=6.6143 | local_train=6.5330 | local_val=6.2910  div=0.161 | 41.1s
+  Round  14/20 | global_val=6.4995 | local_train=6.4751 | local_val=6.2294  div=0.169 | 40.3s
+  Round  15/20 | global_val=6.4205 | local_train=6.4268 | local_val=6.1857  div=0.179 | 41.0s
+  Round  16/20 | global_val=6.3825 | local_train=6.3736 | local_val=6.1333  div=0.188 | 42.4s
+  Round  17/20 | global_val=6.3487 | local_train=6.3319 | local_val=6.0940  div=0.196 | 40.7s
+  Round  18/20 | global_val=6.2947 | local_train=6.3083 | local_val=6.0648  div=0.206 | 40.0s
+  Round  19/20 | global_val=6.2403 | local_train=6.2670 | local_val=6.0402  div=0.213 | 42.8s
+  Round  20/20 | global_val=6.2055 | local_train=6.2324 | local_val=6.0046  div=0.222 | 41.8s
+
+  FL done — 819s total, 41.0s/round
+  Running centralized baseline...
+  [baseline] 1000 steps, optimizer=adamw, lr=0.0003
+    step    50/1000 | train=7.7703 | val=7.5708 | lrm=0.980 | 13s
+    step   100/1000 | train=7.1692 | val=7.0291 | lrm=1.000 | 24s
+    step   150/1000 | train=6.5359 | val=6.4100 | lrm=1.000 | 36s
+    step   200/1000 | train=6.0212 | val=5.9527 | lrm=1.000 | 47s
+    step   250/1000 | train=5.6739 | val=5.6110 | lrm=1.000 | 58s
+    step   300/1000 | train=5.3984 | val=5.3535 | lrm=1.000 | 69s
+    step   350/1000 | train=5.1836 | val=5.1562 | lrm=1.000 | 81s
+    step   400/1000 | train=5.0190 | val=5.0051 | lrm=1.000 | 92s
+    step   450/1000 | train=4.8716 | val=4.8685 | lrm=1.000 | 103s
+    step   500/1000 | train=4.7568 | val=4.7600 | lrm=1.000 | 114s
+    step   550/1000 | train=4.6711 | val=4.6580 | lrm=1.000 | 126s
+    step   600/1000 | train=4.5634 | val=4.5948 | lrm=1.000 | 137s
+    step   650/1000 | train=4.5018 | val=4.5045 | lrm=1.000 | 148s
+    step   700/1000 | train=4.4226 | val=4.4536 | lrm=1.000 | 159s
+    step   750/1000 | train=4.3542 | val=4.3855 | lrm=0.853 | 171s
+    step   800/1000 | train=4.2955 | val=4.3154 | lrm=0.703 | 182s
+    step   850/1000 | train=4.2443 | val=4.2780 | lrm=0.553 | 193s
+    step   900/1000 | train=4.1882 | val=4.2314 | lrm=0.403 | 204s
+    step   950/1000 | train=4.1556 | val=4.1963 | lrm=0.253 | 216s
+    step  1000/1000 | train=4.1277 | val=4.1832 | lrm=0.103 | 227s
+  [baseline] done in 227s
+  Result saved → /mloscratch/homes/goelzer/optml-project/results/c32_multi_language_fedadam_none_adamw/history.json
+  Figure saved → /mloscratch/homes/goelzer/optml-project/figs/c32_multi_language_fedadam_none_adamw_2026-05-26_14-04-17.png
+  [67/120] DONE in 1052s | completed=67/120 | ETA ~200 min

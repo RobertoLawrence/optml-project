@@ -51,7 +51,7 @@ class ModelConfig:
 @dataclass
 class TrainingConfig:
     """Fixed training hyper-parameters (not swept)."""
-    device_batch_size: int = 16
+    device_batch_size: int = 128
     total_batch_size: int  = 2**17
     eval_interval: int     = 50
     eval_batches: int      = 10
