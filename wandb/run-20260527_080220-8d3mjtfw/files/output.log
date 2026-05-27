@@ -1,0 +1,57 @@
+
+======================================================================
+  Experiment: c32_dirichlet0.5_fedavg_none_adam
+  model: depth=8, dim=512, params=50.3M
+  FL: 32 clients × 20 rounds × 50 local steps
+  dist=dirichlet  agg=fedavg  reg=None  opt=adam  lr=0.0003
+  fl_batch_size=4
+======================================================================
+
+  Round   1/20 | global_val=7.5485 | local_train=7.7692 | local_val=7.2315  div=0.321 | 236.3s
+  Round   2/20 | global_val=7.2359 | local_train=7.2474 | local_val=6.8505  div=0.242 | 265.2s
+  Round   3/20 | global_val=6.9208 | local_train=6.9284 | local_val=6.5675  div=0.296 | 273.0s
+  Round   4/20 | global_val=6.6657 | local_train=6.6806 | local_val=6.3935  div=0.337 | 243.3s
+  Round   5/20 | global_val=6.4804 | local_train=6.5097 | local_val=6.2762  div=0.390 | 204.5s
+  Round   6/20 | global_val=6.3423 | local_train=6.3826 | local_val=6.1821  div=0.425 | 275.6s
+  Round   7/20 | global_val=6.2177 | local_train=6.2694 | local_val=6.0814  div=0.456 | 245.0s
+  Round   8/20 | global_val=6.1129 | local_train=6.1760 | local_val=5.9998  div=0.486 | 234.5s
+  Round   9/20 | global_val=6.0317 | local_train=6.0812 | local_val=5.9173  div=0.506 | 204.4s
+  Round  10/20 | global_val=5.9363 | local_train=6.0005 | local_val=5.8468  div=0.520 | 213.1s
+  Round  11/20 | global_val=5.8601 | local_train=5.9192 | local_val=5.7764  div=0.536 | 254.1s
+  Round  12/20 | global_val=5.7781 | local_train=5.8369 | local_val=5.6862  div=0.547 | 255.4s
+  Round  13/20 | global_val=5.6977 | local_train=5.7589 | local_val=5.6152  div=0.557 | 241.8s
+  Round  14/20 | global_val=5.6114 | local_train=5.6830 | local_val=5.5465  div=0.568 | 198.2s
+  Round  15/20 | global_val=5.5473 | local_train=5.6113 | local_val=5.4915  div=0.579 | 176.2s
+  Round  16/20 | global_val=5.4826 | local_train=5.5493 | local_val=5.4266  div=0.589 | 244.3s
+  Round  17/20 | global_val=5.4168 | local_train=5.4837 | local_val=5.3750  div=0.600 | 221.2s
+  Round  18/20 | global_val=5.3604 | local_train=5.4295 | local_val=5.3194  div=0.611 | 238.3s
+  Round  19/20 | global_val=5.3106 | local_train=5.3701 | local_val=5.2811  div=0.619 | 199.1s
+  Round  20/20 | global_val=5.2596 | local_train=5.3196 | local_val=5.2366  div=0.624 | 188.0s
+
+  FL done — 4611s total, 230.6s/round
+  Running centralized baseline...
+  [baseline] 1000 steps, optimizer=adam, lr=0.0003
+    step    50/1000 | train=7.7702 | val=7.5707 | lrm=0.980 | 14s
+    step   100/1000 | train=7.1689 | val=7.0295 | lrm=1.000 | 25s
+    step   150/1000 | train=6.5423 | val=6.4042 | lrm=1.000 | 36s
+    step   200/1000 | train=6.0207 | val=5.9608 | lrm=1.000 | 47s
+    step   250/1000 | train=5.6778 | val=5.6096 | lrm=1.000 | 58s
+    step   300/1000 | train=5.3890 | val=5.3469 | lrm=1.000 | 70s
+    step   350/1000 | train=5.1781 | val=5.1516 | lrm=1.000 | 81s
+    step   400/1000 | train=5.0116 | val=5.0032 | lrm=1.000 | 92s
+    step   450/1000 | train=4.8698 | val=4.8687 | lrm=1.000 | 103s
+    step   500/1000 | train=4.7553 | val=4.7580 | lrm=1.000 | 115s
+    step   550/1000 | train=4.6736 | val=4.6637 | lrm=1.000 | 126s
+    step   600/1000 | train=4.5692 | val=4.5991 | lrm=1.000 | 137s
+    step   650/1000 | train=4.5048 | val=4.5081 | lrm=1.000 | 148s
+    step   700/1000 | train=4.4290 | val=4.4579 | lrm=1.000 | 160s
+    step   750/1000 | train=4.3594 | val=4.3944 | lrm=0.853 | 171s
+    step   800/1000 | train=4.3037 | val=4.3229 | lrm=0.703 | 182s
+    step   850/1000 | train=4.2502 | val=4.2822 | lrm=0.553 | 193s
+    step   900/1000 | train=4.1947 | val=4.2386 | lrm=0.403 | 205s
+    step   950/1000 | train=4.1626 | val=4.2037 | lrm=0.253 | 216s
+    step  1000/1000 | train=4.1340 | val=4.1899 | lrm=0.103 | 227s
+  [baseline] done in 227s
+  Result saved → /mloscratch/homes/goelzer/optml-project/results/c32_dirichlet0.5_fedavg_none_adam/history.json
+  Figure saved → /mloscratch/homes/goelzer/optml-project/figs/c32_dirichlet0.5_fedavg_none_adam_2026-05-27_09-23-05.png
+  [98/120] DONE in 4847s | completed=98/120 | ETA ~172 min

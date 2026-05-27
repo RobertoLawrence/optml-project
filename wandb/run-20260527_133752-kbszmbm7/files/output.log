@@ -1,0 +1,16 @@
+
+======================================================================
+  Experiment: c32_dirichlet0.5_fedavg_fedprox_sgd
+  model: depth=8, dim=512, params=50.3M
+  FL: 32 clients × 20 rounds × 50 local steps
+  dist=dirichlet  agg=fedavg  reg=fedprox  opt=sgd  lr=0.05
+  fl_batch_size=4
+======================================================================
+
+  Round   1/20 | global_val=7.5912 | local_train=7.9456 | local_val=7.2248  div=0.207 | 209.8s
+  Round   2/20 | global_val=7.3219 | local_train=7.3409 | local_val=7.0441  div=0.296 | 176.8s
+  Round   3/20 | global_val=7.1317 | local_train=7.1451 | local_val=6.8528  div=0.335 | 259.9s
+  Round   4/20 | global_val=6.9730 | local_train=6.9804 | local_val=6.7347  div=0.388 | 221.6s
+  Round   5/20 | global_val=6.8459 | local_train=6.8494 | local_val=6.6293  div=0.450 | 195.4s
+  Round   6/20 | global_val=6.7367 | local_train=6.7477 | local_val=6.5568  div=0.468 | 221.1s
+  Round   7/20 | global_val=6.6192 | local_train=6.6483 | local_val=6.4792  div=0.478 | 149.7s

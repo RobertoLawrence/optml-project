@@ -1,0 +1,49 @@
+{
+  "os": "Linux-6.8.0-59-generic-x86_64-with-glibc2.35",
+  "python": "CPython 3.10.12",
+  "startedAt": "2026-05-26T22:34:49.787582Z",
+  "args": [
+    "--local-steps",
+    "50",
+    "--results-dir",
+    "results_bs128_steps50",
+    "--wandb",
+    "--wandb-project",
+    "optml-fedlearning-bs128-steps50"
+  ],
+  "program": "/mloscratch/homes/goelzer/optml-project/main.py",
+  "codePath": "main.py",
+  "codePathLocal": "main.py",
+  "git": {
+    "remote": "git@github.com:RobertoLawrence/optml-project.git",
+    "commit": "779ef614dc746f0247524e10e1c3cbdee6ac165c"
+  },
+  "email": "roberto.goelzer@epfl.ch",
+  "root": "/mloscratch/homes/goelzer/optml-project",
+  "host": "experiment-0-0",
+  "executable": "/mloscratch/homes/goelzer/optml-project/.venv/bin/python",
+  "cpu_count": 64,
+  "cpu_count_logical": 128,
+  "gpu": "NVIDIA A100-SXM4-80GB",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "7679361679360",
+      "used": "4609837563904"
+    }
+  },
+  "memory": {
+    "total": "1081885061120"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA A100-SXM4-80GB",
+      "memoryTotal": "85899345920",
+      "cudaCores": 6912,
+      "architecture": "Ampere",
+      "uuid": "GPU-bde752eb-9e11-3d28-217c-3b190975b144"
+    }
+  ],
+  "cudaVersion": "13.0",
+  "writerId": "g5sbl7eu9lufl4uicxqj79linb1ra8x2"
+}

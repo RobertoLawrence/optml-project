@@ -1,0 +1,8 @@
+
+======================================================================
+  Experiment: c32_dirichlet0.5_fedavg_fedprox_sgd
+  model: depth=8, dim=512, params=50.3M
+  FL: 32 clients × 20 rounds × 50 local steps
+  dist=dirichlet  agg=fedavg  reg=fedprox  opt=sgd  lr=0.05
+  fl_batch_size=4
+======================================================================
