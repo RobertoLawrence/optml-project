@@ -1,0 +1,21 @@
+2026-05-27 16:31:51,580 INFO    MainThread:181 [wandb_init.py:setup_run_log_directory():723] Logging user logs to /mloscratch/homes/goelzer/optml-project/wandb/run-20260527_163151-djromafi/logs/debug.log
+2026-05-27 16:31:51,580 INFO    MainThread:181 [wandb_init.py:setup_run_log_directory():724] Logging internal logs to /mloscratch/homes/goelzer/optml-project/wandb/run-20260527_163151-djromafi/logs/debug-internal.log
+2026-05-27 16:31:51,580 INFO    MainThread:181 [wandb_init.py:init():851] calling init triggers
+2026-05-27 16:31:51,580 INFO    MainThread:181 [wandb_init.py:init():856] wandb.init called with sweep_config: {}
+config: {'num_clients': 32, 'data_distribution': 'dirichlet', 'dirichlet_alpha': 2.0, 'aggregator': 'fedavg', 'client_regularization': None, 'optimizer': 'adamw', 'num_rounds': 20, 'local_steps': 50, 'fedprox_mu': 0.01, 'run_baseline': True, 'eval_every_n_rounds': 1, 'eval_batches_fl': 20, 'track_grad_divergence': True, 'track_comm_cost': True, 'tokens_per_client': None, 'fedadam_lr': 0.01, '_wandb': {}}
+2026-05-27 16:31:51,580 INFO    MainThread:181 [wandb_init.py:init():899] starting backend
+2026-05-27 16:31:51,580 INFO    MainThread:181 [wandb_init.py:init():914] sending inform_init request
+2026-05-27 16:31:51,868 INFO    MainThread:181 [wandb_init.py:init():919] backend started and connected
+2026-05-27 16:31:51,870 INFO    MainThread:181 [wandb_init.py:init():989] updated telemetry
+2026-05-27 16:31:51,884 INFO    MainThread:181 [wandb_init.py:init():1012] communicating run to backend with 90.0 second timeout
+2026-05-27 16:31:52,224 INFO    MainThread:181 [wandb_init.py:init():1057] starting run threads in backend
+2026-05-27 16:31:52,441 INFO    MainThread:181 [wandb_run.py:_console_start():2509] atexit reg
+2026-05-27 16:31:52,441 INFO    MainThread:181 [wandb_run.py:_redirect():2359] redirect: wrap_raw
+2026-05-27 16:31:52,441 INFO    MainThread:181 [wandb_run.py:_redirect():2428] Wrapping output streams.
+2026-05-27 16:31:52,441 INFO    MainThread:181 [wandb_run.py:_redirect():2451] Redirects installed.
+2026-05-27 16:31:52,443 INFO    MainThread:181 [wandb_init.py:init():1095] run started, returning control to user process
+2026-05-27 16:50:35,005 INFO    MainThread:181 [wandb_run.py:_finish():2271] finishing run roberto-goelzer-epfl/optml-fedlearning-bs128-steps50/djromafi
+2026-05-27 16:50:35,006 INFO    MainThread:181 [wandb_run.py:_atexit_cleanup():2476] got exitcode: 0
+2026-05-27 16:50:35,007 INFO    MainThread:181 [wandb_run.py:_restore():2458] restore
+2026-05-27 16:50:35,007 INFO    MainThread:181 [wandb_run.py:_restore():2464] restore done
+2026-05-27 16:50:36,700 INFO    MainThread:181 [wandb_run.py:_footer_sync_info():3877] logging synced files

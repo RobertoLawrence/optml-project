@@ -17,3 +17,8 @@ config: {'num_clients': 32, 'data_distribution': 'dirichlet', 'dirichlet_alpha':
 2026-05-27 14:04:57,368 INFO    MainThread:181 [wandb_run.py:_redirect():2428] Wrapping output streams.
 2026-05-27 14:04:57,368 INFO    MainThread:181 [wandb_run.py:_redirect():2451] Redirects installed.
 2026-05-27 14:04:57,378 INFO    MainThread:181 [wandb_init.py:init():1095] run started, returning control to user process
+2026-05-27 14:27:41,808 INFO    MainThread:181 [wandb_run.py:_finish():2271] finishing run roberto-goelzer-epfl/optml-fedlearning-bs128-steps50/tvobmcwo
+2026-05-27 14:27:41,810 INFO    MainThread:181 [wandb_run.py:_atexit_cleanup():2476] got exitcode: 0
+2026-05-27 14:27:41,810 INFO    MainThread:181 [wandb_run.py:_restore():2458] restore
+2026-05-27 14:27:41,810 INFO    MainThread:181 [wandb_run.py:_restore():2464] restore done
+2026-05-27 14:27:42,879 INFO    MainThread:181 [wandb_run.py:_footer_sync_info():3877] logging synced files
