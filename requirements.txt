@@ -18,4 +18,6 @@ wandb
 # Numerics / plotting
 numpy
 matplotlib
+seaborn
+pandas
 tqdm
