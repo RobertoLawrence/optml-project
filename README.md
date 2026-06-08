@@ -111,7 +111,6 @@ notebooks/
 results/             — per-experiment JSON histories
 figs/                — per-experiment training curves
 figs_paper/          — final figures for the report
-cache/               — tokenizer and tokenized tensors (gitignored)
 ```
 
 ---
