@@ -123,6 +123,7 @@ Each experiment records per round:
 - Per-client local train and validation loss
 - Per-client mean gradient norm (clipped, across local steps)
 - Gradient divergence (1 − mean cosine similarity of each client's parameter update against the mean update)
+- Cumulative communication cost (MB)
 - Round wall-clock time
 
 The centralized baseline records train/validation loss at equal compute steps.
